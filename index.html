@@ -12,17 +12,18 @@
 </head>
 <body>
     <header>
-        <div id="score">View Highscores</div>
+        <button id="viewScores" class="btn btn-info">View Highscores</button>
         <div class="time">
             <span>Time: </span>    
             <span id="time__num">0</span>
+            <span>seconds</span>
         </div>
     </header>
     <main>
         <section id="intro">
             <div class="heading h1">Coding quiz Challenge</div>
-            <div class="description">Try to answer the following code-related questons within the time limit. Keep in mind that incorrect answer will penalize your score time by ten seconds!</div>
-            <button id="startBtn" type="submit">Start Quiz</button>
+            <div class="description">Try to answer the following code-related questons within the time limit. Keep in mind that incorrect answers will penalize your score time by fifteen seconds!</div>
+            <button id="startBtn" type="button" class= "btn btn-danger">Start Quiz</button>
         </section>
         <section id="quiz">
             <div class="quiz__title"></div>
@@ -36,16 +37,20 @@
             </p>
             <label for="initials">Enter initials: </label>
             <input type="text" id="initials" value="">
-            <button type="submit" id="submitBtn">Submit</button>
+            <button id="submitBtn" class="btn btn-dark" type="submit">Submit</button>
         </section>
         <section id="scores">
             <div class="heading h2">Highscores</div>
             <div id="scores__ranking"></div>
             <div class="scores__btn">
-                <button class="gobackBtn">Go Back</button>
-                <button class="clearBtn">Clear Highscores</button>
+                <button id="gobackBtn" class="btn btn-primary" type="button">Go Back</button>
+                <button id="clearBtn" class="btn btn-warning" type="button">Clear Highscores</button>
             </div>
         </section>
+        <div id="verdict">
+            <hr>
+            <span id="verdict__word">right</span>
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

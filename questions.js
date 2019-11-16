@@ -5,14 +5,13 @@ var questions = [
         answer: "<script>" 
     },
     { 
-        title: "What is the correct JavaScript syntax to change the content of the following HTML element? <p id=\"demo\">This is a demonstration.</p>",
+        title: "How can you add a comment in a JavaScript?",
         choices: [ 
-                    `document.getElement("p").innerHTML = "Hello World!;`,
-                    `#demo.innerHTML = "Hello World!";`,      
-                    `document.getElementById("demo").innerHTML = "Hello World!";`,
-                    `document.getElementByName("p").innerHTML = "Hello World!";`
+                    `<!-- This is a comment-->`,
+                    `// This is a comment`,      
+                    `' This is a comment`,
                 ],
-        answer: `document.getElementById("demo").innerHTML = "Hello World!";`
+        answer: `// This is a comment`
     },
     { 
         title: "Where is the correct place to insert a JavaScript?",

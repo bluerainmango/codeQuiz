@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: inherit;
 }
-
 html{
     max-width: 100vw;
     font-size: 62.5%;
@@ -15,24 +14,73 @@ body{
     font-size: 1.6rem;
 }
 header{
+    margin-top: 2rem;
     display:flex;
     justify-content: space-around;
 }
+.time{
+    font-size: 2rem;
+}
 main {
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 5rem auto;
     text-align: center;
+    padding: 1rem;
+}
+.description{
+    margin-bottom: 2rem;
+}
+.quiz__title{
+    padding-bottom: 1rem;
+}
+#scores__ranking,
+.quiz__choices{
+    display:inline-flex;
+    flex-direction: column;
 }
 .choiceBtn {
-    display:block;
+    margin: .5rem 0;
+    text-align: left;
 }
-/* .intro {
-    text-align: center;
-    /* display: block;
-}*/
+#scores__ranking > p {
+    text-align: left;
+}
 #result{
     display:none;
 }
 #scores{
     display:none;
+}
+#verdict{
+    opacity: 0;
+    color: orangered;
+}
+input{
+    padding: .5rem;
+    margin-right: 1rem;
+}
+
+/* Bootstrap style */
+.btn{
+    font-size: 1.6rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 460px){
+    .scores__btn{
+        display: flex;
+        flex-direction: column;
+        margin: 0 3rem;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+        margin: 0 3rem;
+    }
+    main{
+        margin-top: 1rem;
+    }
+    #initials{
+        margin-bottom: 1rem;
+    }
 }

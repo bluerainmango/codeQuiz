@@ -1,19 +1,3 @@
-// start btn event
-// intro display none
-// show quiz 1 arr[0]
-// time countdown 75 func
-
-// data
-// quiz 5 array []
-// each quiz: {title, choices, answer}
-
-// quiz render
-// title
-// btn - choicese
-// btn event, delegation
-// btn check if last question, show all done page
-// verdit 
-
 var state = {
     currentQuestion: 0,
     remainingTime: questions.length * 15,
@@ -42,11 +26,10 @@ function quizRender(data){
 
         var choice = document.createElement('button');
             choice.innerText = (i+1) + '. ' + data.choices[i];
-            choice.classList.add("choiceBtn");
+            choice.classList.add("choiceBtn", "btn", "btn-success" );
 
         var answer = ( data.answer === data.choices[i] ) ? "correct" : "wrong";
             choice.setAttribute('data-answer', answer);
-        
         choicesDOM.appendChild(choice);
     }
 }
@@ -80,8 +63,8 @@ function result(){
 function init(){
 
     var fromLocal = localStorage.getItem('highScores');
-        
-    if(fromLocal){ state.highScores = JSON.parse(fromLocal); }
+        console.log(fromLocal)
+    if(fromLocal){ state.highScores = JSON.parse(fromLocal); console.log('hello')}
 
     document.querySelector('#intro').setAttribute('style','display:block;');
     document.querySelector('#scores').setAttribute('style','display:none;');
@@ -112,14 +95,22 @@ function renderHighScores(){
         var rank = document.createElement('p')
             rank.innerText = (i+1) + ". " + el.initials + " - " + el.score;
             scoresDOM.appendChild(rank);
-            // console.log(rank)
+            console.log(rank)
     });
 }
 function clearTime(){
     if(state.timer > 0) { clearInterval(state.timer); }
     if(state.timeOut > 0) { clearTimeout(state.timeOut); }
 }
+function verdict(word){
 
+    document.querySelector('#verdict__word').innerText = word;
+    document.querySelector('#verdict').setAttribute('style','opacity:1;');
+
+    setTimeout(function(){
+        document.querySelector('#verdict').setAttribute('style','opacity:0;');
+    },1000);
+}
 // Start quiz button
 document.querySelector('#startBtn').addEventListener('click',function(e){
     // Hide intro
@@ -137,6 +128,10 @@ document.querySelector('.quiz__choices').addEventListener('click',function(e){
         // console.log("wrong answer");
         state.remainingTime -= state.timePenalty;
         timerFunc();
+        verdict("Wrong!");
+    }
+    else{
+        verdict("Correct!");
     }
     // Move to next question
     state.currentQuestion ++;
@@ -173,12 +168,12 @@ document.querySelector('#submitBtn').addEventListener('click', function(){
 document.querySelector('.scores__btn').addEventListener('click',function(e){
 
     // Go back btn
-    if(e.target.matches('.gobackBtn')){
+    if(e.target.matches('#gobackBtn')){
         // console.log('back btn pressed')
         init();
     }
     // Clear Highscores btn
-    else if(e.target.matches('.clearBtn')){
+    else if(e.target.matches('#clearBtn')){
         // console.log('clear btn pressed')
         state.highScores = [];
         
@@ -189,7 +184,7 @@ document.querySelector('.scores__btn').addEventListener('click',function(e){
     }
 });
 // View highscores button
-document.querySelector('#score').addEventListener('click', function(){
+document.querySelector('#viewScores').addEventListener('click', function(){
 
     document.querySelector('#result').setAttribute('style','display:none;');
     document.querySelector('#quiz').setAttribute('style','display:none;');
@@ -197,6 +192,7 @@ document.querySelector('#score').addEventListener('click', function(){
     document.querySelector('#scores').setAttribute('style','display:block;');
     
     clearTime();
+    renderHighScores();
 });
 
 init();
