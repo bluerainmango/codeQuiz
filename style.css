@@ -14,10 +14,10 @@ body{
     font-size: 1.6rem;
     height: 100vh;
     background: url(./assets/bg.png) repeat 0 0;
-    -webkit-animation: bg-scrolling-reverse .92s infinite;
-    -moz-animation:    bg-scrolling-reverse .92s infinite;
-    -o-animation:      bg-scrolling-reverse .92s infinite;
-    animation:         bg-scrolling-reverse .92s infinite;
+    -webkit-animation: bg-scrolling-reverse 3s infinite;
+    -moz-animation:    bg-scrolling-reverse 3s infinite;
+    -o-animation:      bg-scrolling-reverse 3s infinite;
+    animation:         bg-scrolling-reverse 3s infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function:    linear;
     -o-animation-timing-function:      linear;
