@@ -7,6 +7,7 @@ It can help for javascript leaners to test their understanding of javascript.
 
 ## ✨Demo
 Start quiz by clicking "Start Quiz" button. The timer will begin countdown and questions will be shown on the page one by one. Score is calculated by time remaining and answering incorrectly results in a 15 seconds of time penalty. If you solve all questions or time's up, you will be navigated to the next page to save your record.
+![screenshot](./assets/demo.gif)
 
 #### Contact
 📧 bluerainmango@gmail.com <br />
