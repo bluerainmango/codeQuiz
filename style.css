@@ -12,7 +12,22 @@ html{
 body{
     box-sizing: border-box;
     font-size: 1.6rem;
+    height: 100vh;
+    background: url(./assets/bg.png) repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse .92s infinite;
+    -moz-animation:    bg-scrolling-reverse .92s infinite;
+    -o-animation:      bg-scrolling-reverse .92s infinite;
+    animation:         bg-scrolling-reverse .92s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function:    linear;
+    -o-animation-timing-function:      linear;
+    animation-timing-function:         linear;
 }
+
+/************************/
+/*        HEADER        */
+/************************/   
+
 header{
     margin-top: 2rem;
     display:flex;
@@ -21,6 +36,11 @@ header{
 .time{
     font-size: 2rem;
 }
+
+/************************/
+/*         MAIN         */
+/************************/   
+
 main {
     max-width: 80rem;
     margin: 5rem auto;
@@ -60,12 +80,18 @@ input{
     margin-right: 1rem;
 }
 
-/* Bootstrap style */
+/************************/
+/*   BOOTSTRAP CHANGE   */
+/************************/  
+
 .btn{
     font-size: 1.6rem;
 }
 
-/* Responsive */
+/************************/
+/*      RESPONSIVE      */
+/************************/  
+
 @media screen and (max-width: 460px){
     .scores__btn{
         display: flex;
@@ -84,3 +110,33 @@ input{
         margin-bottom: 1rem;
     }
 }
+
+/************************/
+/*      ANIMATION       */
+/************************/  
+
+@-webkit-keyframes bg-scrolling-reverse {
+    100% { background-position: 50px 50px; }
+  }
+  @-moz-keyframes    bg-scrolling-reverse {
+    100% { background-position: 50px 50px; }
+  }
+  @-o-keyframes      bg-scrolling-reverse {
+    100% { background-position: 50px 50px; }
+  }
+  @keyframes         bg-scrolling-reverse {
+    100% { background-position: 50px 50px; }
+  }
+  
+@-webkit-keyframes bg-scrolling {
+    0% { background-position: 50px 50px; }
+  }
+  @-moz-keyframes    bg-scrolling {
+    0% { background-position: 50px 50px; }
+  }
+  @-o-keyframes      bg-scrolling {
+    0% { background-position: 50px 50px; }
+  }
+  @keyframes         bg-scrolling {
+    0% { background-position: 50px 50px; }
+  }
