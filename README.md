@@ -1,12 +1,12 @@
 # codeQuiz
-> Test your javascript knowledge with this codeQuiz! <br>
+> Test your javascript knowledge with codeQuiz! <br>
 🔗https://bluerainmango.github.io/codeQuiz/
 
 ## 🎯Purpose
-It can help for javascript leaners to test their understanding of javascript. 
+It can help the people who are trying to learn and to test their understanding of JavaScript.
 
 ## ✨Demo
-Start quiz by clicking "Start Quiz" button. The timer will begin countdown and questions will be shown on the page one by one. Score is calculated by time remaining and answering incorrectly results in a 15 seconds of time penalty. If you solve all questions or time's up, you will be navigated to the next page to save your record.
+Start quiz by clicking the “start quiz” button. Timer will begin countdown.... Score will be calculated by the time remaining and answering incorrectly will result in a 15 second penalty. If you solve all the questions or if the time is up, you will then be navigated to the next page and you can save your record.
 ![screenshot](./assets/demo.gif)
 
 #### Contact
